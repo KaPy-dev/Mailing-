@@ -50,6 +50,8 @@ async def StartSettingUser(SSU:Message, state:FSMContext):
                         await state.set_state(fsm.AddUsers.NameUsers)
                         @router.message(fsm.AddUsers.NameUsers)
                         async def UsersNamePersonAdd(UNPA:Message, state:FSMContext):
+                            NmaeUsers = UNPA.text
+                            await main.insert_bot.send_message(UNPA.from_user.id, "Информация о пользователя введена успешно !")
                             
 
         if SUC.text == "✏️":
