@@ -40,7 +40,7 @@ async def StartMaling(SM:Message, state:FSMContext):
             from FunctionButton.SettingUser import StartSettingUser
             await StartSettingUser(C, state)
             
-         
+            print(9)
         if C.text =="📨Рассылка📩":
             pass
 
