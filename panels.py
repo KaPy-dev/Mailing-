@@ -55,6 +55,6 @@ settingUsers = ReplyKeyboardMarkup(
         [
             types.KeyboardButton(text='◀️')
         ]
-    ]
+    ], resize_keyboard=True
 ) 
 

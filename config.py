@@ -1,4 +1,8 @@
 import sqlite3, os, pathlib
+from dotenv import load_dotenv
+
+load_dotenv()  # Загружает переменные из .env в os.environ
+
 global DIR
 DIR = pathlib.Path(__file__).parent.resolve()
 os.chdir(DIR)
@@ -13,6 +17,7 @@ with sqlite3.connect('base.db') as conn:
 
 
 
+config = (os.getenv("config"))  # "localhost"
 
 
 
